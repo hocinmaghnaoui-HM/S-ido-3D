@@ -9,7 +9,7 @@
   "kv_namespaces": [
     {
       "binding": "PRODUCTS_KV",
-      "id": "PUT_YOUR_KV_NAMESPACE_ID_HERE"
+      "id": "npx wrangler kv namespace create BINDING_NAME"
     }
   ]
 }

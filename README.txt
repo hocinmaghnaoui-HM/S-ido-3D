@@ -64,3 +64,4 @@ wrangler.jsonc الجديد (انسخه من النسخة القديمة إن ك
 - public/images/               الصور
 
 رقم WhatsApp الحالي: 213672351399 (يُعدَّل من public/config.js)
+trigger rebuild Sun Sep 13 18:29:29 UTC 2026
