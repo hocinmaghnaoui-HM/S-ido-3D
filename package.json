@@ -1,0 +1,13 @@
+{
+  "name": "saido-nuts",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

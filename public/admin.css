@@ -1,0 +1,71 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Cairo,Arial,sans-serif;background:#0b0a09;color:#f7ecd8;min-height:100vh}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;padding:11px 18px;font-weight:800;cursor:pointer;border:none;font:inherit}
+.btn.primary{background:#d7a13b;color:#16110a}
+.btn.secondary{border:1px solid #72552c;color:#f7ecd8;background:transparent}
+.full{width:100%}
+
+.login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.login-box{background:#15120f;border:1px solid #382817;border-radius:20px;padding:30px;max-width:360px;width:100%;text-align:center}
+.login-logo{height:60px;margin-bottom:14px}
+.login-box h1{font-size:18px;margin-bottom:20px}
+.login-box input{width:100%;padding:12px;border-radius:10px;border:1px solid #4b351d;background:#0d0c0b;color:#f7ecd8;font:inherit;margin-bottom:14px}
+.error-text{color:#e26b6b;font-size:13px;min-height:18px}
+
+.admin-topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid #382817;background:#120f0c}
+.admin-topbar h1{font-size:18px;margin:0}
+
+.admin-tabs{display:flex;gap:6px;padding:10px 5%;background:#0f0d0b;overflow-x:auto;border-bottom:1px solid #382817}
+.tab-btn{background:transparent;border:1px solid #382817;color:#cbbda7;padding:9px 16px;border-radius:99px;font:inherit;font-weight:700;cursor:pointer;white-space:nowrap}
+.tab-btn.active{background:#d7a13b;color:#16110a;border-color:#d7a13b}
+
+.admin-main{max-width:900px;margin:auto;padding:24px 5%;display:flex;flex-direction:column;gap:24px}
+.tab-panel{display:none;flex-direction:column;gap:20px}
+.tab-panel.active{display:flex}
+
+.admin-card{background:#15120f;border:1px solid #382817;border-radius:18px;padding:22px}
+.admin-card h2{margin-top:0}
+.admin-card label{display:block;margin-bottom:14px;font-weight:700;font-size:14px}
+.admin-card input,.admin-card textarea{width:100%;margin-top:6px;background:#0d0c0b;border:1px solid #4b351d;border-radius:10px;color:#f7ecd8;padding:10px;font:inherit}
+.checkbox-row{display:flex;align-items:center;gap:8px;font-weight:700}
+.checkbox-row input{width:auto;margin:0}
+
+.tier-row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:8px;align-items:center}
+.tier-row input{margin:0}
+.tier-row button{background:#3a1f1f;color:#f0b4b4;border:none;border-radius:8px;padding:8px 10px;cursor:pointer}
+
+.form-actions{display:flex;gap:10px;margin-top:16px}
+
+.admin-list{display:flex;flex-direction:column;gap:12px}
+.admin-row{display:flex;gap:14px;align-items:center;background:#0d0c0b;border:1px solid #382817;border-radius:14px;padding:12px;flex-wrap:wrap}
+.admin-row img{width:52px;height:52px;object-fit:cover;border-radius:10px;flex-shrink:0}
+.admin-row .row-info{flex:1;min-width:160px}
+.admin-row .row-info h4{margin:0;font-size:15px}
+.admin-row .row-info small{color:#a99b86;display:block;margin-top:3px}
+.admin-row .row-actions{display:flex;gap:8px;flex-wrap:wrap}
+.admin-row .row-actions button,.admin-row select{background:transparent;border:1px solid #4b351d;color:#f7ecd8;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:13px;font-family:inherit}
+.inactive-badge{color:#e2a13b;font-size:12px;font-weight:800}
+.hint{color:#9e9385;font-size:13px}
+
+.status-pill{padding:3px 10px;border-radius:99px;font-size:12px;font-weight:800;display:inline-block}
+.status-جديد{background:#2c3f7a;color:#c7d4ff}
+.status-مؤكد{background:#3a5a2c;color:#cdeab8}
+.status-تم\ الشحن{background:#5a4a2c;color:#f0dcae}
+.status-تم\ التسليم{background:#1f4d3d;color:#b6f0d8}
+.status-ملغى{background:#5a2c2c;color:#f0b4b4}
+
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat-card{background:#15120f;border:1px solid #382817;border-radius:16px;padding:20px;text-align:center}
+.stat-card span{display:block;color:#a99b86;font-size:13px;margin-bottom:6px}
+.stat-card strong{font-size:26px;color:#d7a13b}
+.status-breakdown{display:flex;gap:10px;flex-wrap:wrap}
+
+.zones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:16px 0}
+.zone-row{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#0d0c0b;border:1px solid #382817;border-radius:10px;padding:8px 12px}
+.zone-row span{font-size:13px;flex:1}
+.zone-row input{width:90px;background:#15120f;border:1px solid #4b351d;border-radius:8px;color:#f7ecd8;padding:6px;font:inherit}
+
+@media(max-width:700px){
+  .stats-grid{grid-template-columns:1fr}
+  .admin-tabs{justify-content:flex-start}
+}

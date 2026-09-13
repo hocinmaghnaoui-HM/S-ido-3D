@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>لوحة تحكم Säido Nuts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="loginScreen" class="login-screen">
+  <div class="login-box">
+    <img src="/images/logo.png" alt="Säido Nuts" class="login-logo">
+    <h1>لوحة تحكم Säido Nuts</h1>
+    <input id="passwordInput" type="password" placeholder="كلمة المرور" autocomplete="off">
+    <button id="loginBtn" class="btn primary full">دخول</button>
+    <p id="loginError" class="error-text"></p>
+  </div>
+</div>
+
+<div id="adminScreen" class="admin-screen" style="display:none">
+  <header class="admin-topbar">
+    <h1>🥜 لوحة تحكم Säido Nuts</h1>
+    <button id="logoutBtn" class="btn secondary">خروج</button>
+  </header>
+
+  <nav class="admin-tabs">
+    <button class="tab-btn active" data-tab="dashboard">الإحصائيات</button>
+    <button class="tab-btn" data-tab="orders">الطلبات</button>
+    <button class="tab-btn" data-tab="products">المنتجات</button>
+    <button class="tab-btn" data-tab="zones">مناطق التوصيل</button>
+  </nav>
+
+  <main class="admin-main">
+
+    <!-- DASHBOARD -->
+    <section id="tab-dashboard" class="tab-panel active">
+      <div class="stats-grid">
+        <div class="stat-card"><span>إجمالي الطلبات</span><strong id="statOrders">—</strong></div>
+        <div class="stat-card"><span>الإيرادات (غير الملغاة)</span><strong id="statRevenue">—</strong></div>
+        <div class="stat-card"><span>المنتجات الظاهرة</span><strong id="statProducts">—</strong></div>
+      </div>
+      <div class="admin-card">
+        <h2>الطلبات حسب الحالة</h2>
+        <div id="statusBreakdown" class="status-breakdown"><p class="hint">جاري التحميل...</p></div>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section id="tab-orders" class="tab-panel">
+      <div class="admin-card">
+        <h2>سجل الطلبات</h2>
+        <div id="ordersList" class="admin-list"><p class="hint">جاري التحميل...</p></div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="tab-products" class="tab-panel">
+      <div class="admin-card">
+        <h2 id="formTitle">إضافة منتج جديد</h2>
+        <form id="productForm">
+          <input type="hidden" id="productId">
+          <label>اسم المنتج<input id="pName" required placeholder="مثال: زبدة الفول السوداني"></label>
+          <label>الوصف<textarea id="pDescription" rows="2" placeholder="وصف قصير للمنتج"></textarea></label>
+          <label>رابط الصورة<input id="pImage" placeholder="/images/product-main.jpg أو رابط خارجي"></label>
+          <label class="checkbox-row"><input type="checkbox" id="pActive" checked> ظاهر للعملاء</label>
+
+          <h3>أسعار الكميات</h3>
+          <div id="tiersList"></div>
+          <button type="button" id="addTierBtn" class="btn secondary">+ إضافة كمية جديدة</button>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">حفظ المنتج</button>
+            <button type="button" id="cancelEditBtn" class="btn secondary" style="display:none">إلغاء التعديل</button>
+          </div>
+          <p id="formMsg" class="error-text"></p>
+        </form>
+      </div>
+
+      <div class="admin-card">
+        <h2>المنتجات الحالية</h2>
+        <div id="productsList" class="admin-list"><p class="hint">جاري التحميل...</p></div>
+      </div>
+    </section>
+
+    <!-- DELIVERY ZONES -->
+    <section id="tab-zones" class="tab-panel">
+      <div class="admin-card">
+        <h2>رسوم التوصيل حسب الولاية</h2>
+        <p class="hint">اترك الحقل فارغًا أو 0 إن كان التوصيل لتلك الولاية مجانيًا أو غير محدد بعد.</p>
+        <div id="zonesList" class="zones-grid"><p class="hint">جاري التحميل...</p></div>
+        <div class="form-actions">
+          <button id="saveZonesBtn" class="btn primary">حفظ رسوم التوصيل</button>
+        </div>
+        <p id="zonesMsg" class="error-text"></p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="algeria-locations.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

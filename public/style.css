@@ -1,0 +1,100 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Cairo,Arial,sans-serif;background:#0b0a09;color:#f7ecd8;line-height:1.7}
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:10px 5%;background:rgba(11,10,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid #3d2b17}
+.brand img{height:54px;width:auto;display:block}
+.mini-cta,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:12px;padding:11px 18px;font-weight:800;cursor:pointer;border:none;font:inherit}
+.mini-cta{color:#17110a;background:#d7a13b}
+.hero{max-width:1180px;margin:auto;min-height:650px;padding:55px 5%;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+.eyebrow,.section-head span,.tag{color:#d7a13b;font-weight:800;letter-spacing:1px}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.2;margin:15px 0}
+.hero h1 span{color:#d7a13b}
+.hero p{font-size:18px;color:#d9cfbf;max-width:620px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}
+.btn.primary{background:#d7a13b;color:#16110a}
+.btn.secondary{border:1px solid #72552c;color:#f7ecd8;background:transparent}
+.trust-row{display:flex;gap:18px;flex-wrap:wrap;color:#cbbda7;font-size:14px}
+.hero-product{position:relative;max-width:520px;margin:auto}
+.hero-product img{width:100%;border-radius:24px;display:block;box-shadow:0 25px 70px rgba(0,0,0,.6);border:1px solid #4b351d}
+.price-badge{position:absolute;bottom:20px;left:20px;background:#d7a13b;color:#17110a;border-radius:16px;padding:10px 18px;box-shadow:0 10px 30px #000}
+.price-badge small,.price-badge strong{display:block;text-align:center}
+.price-badge strong{font-size:25px}
+.section{max-width:1180px;margin:auto;padding:80px 5%}
+.section.alt{max-width:none;background:#120f0c}
+.section-head{text-align:center;margin-bottom:35px}
+.section-head span{font-size:14px}
+.section-head h2{font-size:clamp(28px,4vw,42px);margin:5px 0}
+
+/* Dynamic products grid */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.product-tile{background:#15120f;border:1px solid #382817;border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.product-tile img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.product-tile .pt-body{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.product-tile h3{margin:0;font-size:20px}
+.product-tile p{color:#cfc3b2;font-size:14px;margin:0;flex:1}
+.product-tile .pt-price{color:#d7a13b;font-weight:900;font-size:22px}
+.product-tile .btn{margin-top:6px}
+
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gallery img{width:100%;border-radius:16px;display:block;aspect-ratio:1/1;object-fit:cover}
+.product-info h3{font-size:30px;margin:12px 0}
+.product-info p{color:#cfc3b2}
+.big-price{font-size:42px;font-weight:900;color:#d7a13b;margin:20px 0}
+.big-price small{font-size:20px}
+.full{width:100%;border:0;cursor:pointer;font-size:16px}
+
+.lifestyle-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:1180px;margin:auto;padding:0 5%}
+.lifestyle-grid figure{margin:0;border-radius:20px;overflow:hidden;position:relative;border:1px solid #382817}
+.lifestyle-grid img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+.lifestyle-grid figcaption{padding:14px;background:#15120f;color:#e8dcc9;font-weight:700;text-align:center}
+
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review-card{background:#15120f;border:1px solid #382817;border-radius:18px;padding:24px;text-align:center}
+.review-card .stars{color:#d7a13b;font-size:20px;margin-bottom:10px}
+.review-card p{color:#e6dac6;font-style:italic}
+.review-card strong{display:block;margin-top:10px;color:#cbbda7;font-size:14px}
+
+.offers{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.offers article{position:relative;text-align:center;padding:30px 15px;border:1px solid #49331d;border-radius:20px;background:#15120f}
+.offers article.popular{border-color:#d7a13b;transform:translateY(-8px)}
+.offers em{position:absolute;top:-13px;right:50%;transform:translateX(50%);background:#d7a13b;color:#17110a;padding:4px 12px;border-radius:99px;font-size:12px;font-style:normal;font-weight:800}
+.offers b,.offers strong,.offers small{display:block}
+.offers b{font-size:20px}
+.offers strong{font-size:31px;color:#d7a13b}
+.offers small{color:#bfb19f}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.features div{padding:28px;border:1px solid #382817;border-radius:18px;text-align:center;background:#12100e}
+.features div:first-letter{font-size:28px}
+.features h3{margin:5px}
+.features p{color:#bfb19f;margin:0}
+.order-section{background:linear-gradient(180deg,#0b0a09,#15100b)}
+.order-box{max-width:680px;margin:auto;background:#15120f;border:1px solid #49331d;border-radius:24px;padding:25px}
+.order-box label{display:block;margin-bottom:15px;font-weight:700}
+.order-box input,.order-box select,.order-box textarea{width:100%;margin-top:7px;background:#0d0c0b;border:1px solid #4b351d;border-radius:10px;color:#f7ecd8;padding:12px;font:inherit}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.total{background:#0d0c0b;border-radius:12px;padding:14px;margin:15px 0;font-size:18px}
+.total strong{color:#d7a13b}
+.delivery-line{font-size:13px;color:#a99b86;margin-bottom:6px}
+.hint{font-size:12px;color:#9e9385;text-align:center}
+.faq details{max-width:850px;margin:10px auto;border:1px solid #382817;border-radius:12px;padding:15px 18px;background:#12100e}
+.faq summary{cursor:pointer;font-weight:800}
+.faq p{color:#c8bbaa}
+footer{text-align:center;padding:45px 5%;border-top:1px solid #382817;color:#9f9383}
+footer img{height:100px;max-width:220px;object-fit:contain}
+.socials{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.socials a{color:#d7a13b;text-decoration:none;font-weight:700}
+.order-box select{appearance:auto;min-height:48px}
+.order-box select:disabled{opacity:.65}
+
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;padding-top:35px}
+  .hero-copy{text-align:center}
+  .hero p{margin:auto}
+  .hero-actions{justify-content:center}
+  .trust-row{justify-content:center}
+  .product-card{grid-template-columns:1fr}
+  .offers,.features,.reviews-grid,.lifestyle-grid{grid-template-columns:1fr}
+  .offers article.popular{transform:none}
+  .gallery{grid-template-columns:1fr 1fr}
+  .two{grid-template-columns:1fr}
+  .section{padding:60px 5%}
+  .brand img{height:46px}
+}
